@@ -7,6 +7,8 @@ Useful commands for terminal, terminal software configuration, etc.
 1. [Configuring iTerm text navigation](#configuring-iterm-text-navigation)
 2. [Useful bash commands](#useful-shell-commands)
 3. [Useful GIT commands](#useful-git-commands)
+   1. [Using custom SSH key](#using-custom-ssh-key)
+   2. [Customizing Github repo](#customizing-github-repo)
 4. [Useful Docker commands](#useful-docker-commands)
 
 ## Configuring iTerm text navigation
@@ -79,6 +81,17 @@ Host github-my-repo
     User git
     # Path to your private SSH key
     IdentityFile /root/.ssh/github-my-repo.id.rsa
+```
+
+### Customizing Github repo
+1. Open .git/config file in a local repo
+2. Add the following lines:
+```
+[user]
+        name = %User Name%
+        email = %user_email%
+[core]
+        sshCommand = "ssh -i ~/.ssh/id_rsa"
 ```
 
 ## Useful Docker commands
